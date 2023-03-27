@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(180, 153, 234);
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+}
+/* Estilos del contenedor donde están todos los dados */
+.container{
+    display: flex;
+    height: 600px;
+    width: 1200px;
+    background-color: rgb(75, 75, 75);
+    margin: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilos que se deben aplicar en todos los dados */
+.lado{
+    display: flex;
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10%;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/* Estilos que se deben aplicar al punto de cada dado */
+.punto{
+    width: 30px;
+	height: 30px !important;
+	border-radius: 50%;
+	background: black;
+}
+
+/* Estilos del dado número 1 */
+.first-face{
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos del dado número 2 */
+.second-face{
+    justify-content: space-between;
+} 
+/* Profe la verdad no entiendo para qué sirve esta propiedad nth-child, sé visualmente qué hace pero no entiendo cómo funciona.
+Tuve que poner aparte el "justify-content: space between" para que quedaran bien los dos puntos de este dado, y tampoco entiendo por qué
+no funciona estando dentro de esta misma sección de estilos */
+.second-face .punto:nth-child(2){
+    align-self: flex-end;
+}
+
+/* Estilos del dado número 3 */
+.third-face{
+    flex-direction: column;
+    justify-content: space-between;
+}
+.third-face .punto:nth-child(2){
+    align-self: center;
+}
+.third-face .punto:nth-child(3){
+    align-self: flex-end;
+}
+
+/* Estilos del dado número 4*/
+.four-face{
+    justify-content: space-between;
+}
+.columna1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    height: 100%;
+}
+.columna2{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    text-align: right;
+    height: 100%;
+    justify-content: space-between;
+}
+/* Estilos del dado número 5 */
+.columna1-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    height: 100%;
+}
+.medio{
+    display: flex;
+    align-self: center;
+}
+/* Para el dado 5 y 6 se están aplicando los estilos de columna 1 y columna 2 que usé para el dado 4 */
